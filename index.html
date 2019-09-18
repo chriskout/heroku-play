@@ -9,11 +9,14 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
   </head>
   <body>
-    <h1>TEXT TWIST BABYYYYY</h1>
-    <button id="New Scramble"></button>
-    <h2 id = "scramble"></h2>
+    <title>TEXT TWIST BABYYYYY</title>
+    <button id="grabmore"></button>
+    <button id="newscramble"></button>   
+    <h1 id = "scramble"></h1>
     <ul id="bingos">
     </ul>
+    <button id="Check"></button>
+
   </body>
   <script>
     $(document).ready(function(){
@@ -24,7 +27,7 @@
         $("#scramble").html('');
         $("#scramble").append(`<strong>${rack.rack}</strong>`);
 
-        $("#bingos").html();
+        $("#bingos").html('');
         racks.map(rack=>{
           $("#bingos").append(`<li>${rack.rack}: <span class="answer hidden">${rack.words}</span></li>`);
         });
