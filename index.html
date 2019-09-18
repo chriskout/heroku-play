@@ -9,16 +9,22 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
   </head>
   <body>
-    <h1>Spot The Bingo</h1>
-    <button id="grabmore">Fetch 10 Bingos</button>
+    <h1>TEXT TWIST BABYYYYY</h1>
+    <button id="New Scramble"></button>
+    <h2 id = "scramble"></h2>
     <ul id="bingos">
     </ul>
   </body>
   <script>
     $(document).ready(function(){
+
       
+
       let showRacks = function(racks){
-        $("#bingos").html('');
+        $("#scramble").html('');
+        $("#scramble").append(`<strong>${rack.rack}</strong>`);
+
+        $("#bingos").html();
         racks.map(rack=>{
           $("#bingos").append(`<li>${rack.rack}: <span class="answer hidden">${rack.words}</span></li>`);
         });
