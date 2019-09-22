@@ -10,13 +10,16 @@
   </head>
   <body>
     
-    <button id="grabmore">grab more</button>
-    <button id="newscramble">new scramble</button>   
+    <button id="grabmore">grab more</button>   
     <h1 id = "scramble">Hit Grab More to get a rack</h1>
     <ul id="bingos">
     </ul> 
     <button id="Check">Check</button>
-
+    <form>
+      Word:<br>
+      <input type="text" name="firstname"><br>
+    </form>
+    <button id="Submit">new scramble</button>
   </body>
   <script>
     $(document).ready(function(){
@@ -24,8 +27,8 @@
       
       
       let showRacks = function(racks){
-       $("#scramble").html('');
-       $("#scramble").text(`${racks[0].rack}`);
+        $("#scramble").html('');
+        $("#scramble").text(`${racks[0].rack}`);
         
         
         }
