@@ -19,9 +19,9 @@
     <form id = "form">
       Word:<br>
       <input type="text" id = "uin"><br>
-      <input type="submit id = "usubmit" onclick="check()">
+      <input type="submit" id = "usubmit" onclick="check()">
     </form>
-    //<button id="Check">Check</button>
+    <button id="Check">Check</button>
     <button id="Submit">New Scramble</button>
   </body>
   <script>
@@ -30,6 +30,7 @@
       
       function check() {
                          var input = document.getElementByID("uin");
+                         console.log(input);
       }
                                                                    
       
