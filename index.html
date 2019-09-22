@@ -10,21 +10,28 @@
   </head>
   <body>
     
-    <button id="grabmore">grab more</button>   
+       
     <h1 id = "scramble">Hit Grab More to get a rack</h1>
+    <button id="grabmore">grab more</button>
     <ul id="bingos">
     </ul> 
-    <button id="Check">Check</button>
-    <form>
+    
+    <form id = "form">
       Word:<br>
-      <input type="text" name="firstname"><br>
+      <input type="text" id = "uin"><br>
+      <input type="submit id = "usubmit" onclick="check()">
     </form>
-    <button id="Submit">new scramble</button>
+    //<button id="Check">Check</button>
+    <button id="Submit">New Scramble</button>
   </body>
   <script>
     $(document).ready(function(){
       console.log("string");
       
+      function check() {
+                         var input = document.getElementByID("uin");
+      }
+                                                                   
       
       let showRacks = function(racks){
         $("#scramble").html('');
