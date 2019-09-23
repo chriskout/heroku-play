@@ -29,11 +29,22 @@
       
       function check() {
                          var input = document.getElementByID("uin");
+                         var res
                          console.log(input);
                          $.ajax({
                          method: "GET",
                          url: "subracks.php",
-                         success: data=>{compare(data)}
+                         data: {subracks: 'sub', arguments: [input]},
+                         success: function(obj, textstatus) {
+                            if (!('error' in obj)  ) {
+                               res = obj.result;
+                            }
+                            else {
+                              console.log(obj.error);
+                            }
+                         }
+                           
+                           
                         });
       }
                                                                    
