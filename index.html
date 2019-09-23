@@ -16,9 +16,9 @@
     <ul id="bingos">
     </ul> 
     
-    <form id = "form">
+    <form id = "myform">
       Word:<br>
-      <input type="text" id = "uin"><br>
+      <input type="text" name = "uin" value = ""><br>
       <input type="submit" id = "usubmit" onclick="check()">
     </form>
     <button id="Submit">New Scramble</button>
@@ -27,8 +27,9 @@
     $(document).ready(function(){
       console.log("string");
       
-      function check() {
-                         var input = document.getElementByID("uin");
+      function check(form) {
+                        var input=0;
+                         input=document.myform.uin.value;
                          var res;
                          console.log(input);
                          console.log(scramble.text);
