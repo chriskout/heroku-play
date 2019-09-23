@@ -27,7 +27,8 @@
     var unused_words = {};
    
     function check(form) {
-        
+        var ul = document.getElementById("bingos");
+        var li = document.createElement("li");
         var input = document.myform.uin.value;
         input = input.toUpperCase();
         console.log(input);
@@ -36,7 +37,8 @@
           if (val == input) {
             delete unused_words[i];
             console.log("successfully removed");
-             $("#bingos").append(`<li>$input</li>`);
+            li.appendChild(document.createTextNode(input));
+            ul.appendChild(li); 
           }
         });
                   }
