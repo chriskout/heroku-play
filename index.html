@@ -29,7 +29,7 @@
     function check(form) {
         console.log("checking...");
         var input = document.myform.uin.value;
-        JQuery.each(unused_words, function(i, val) {
+        $.each(unused_words, function(i, val) {
           if (val == input) {
             delete unused_words[i];
             console.log("successfully removed");
