@@ -27,9 +27,10 @@
     var unused_words = {};
     var used_words = {};
     function check(form) {
-        console.log("checking...");
+        console.log(input);
         var input = document.myform.uin.value;
         $.each(unused_words, function(i, val) {
+          console.log(val);
           if (val == input) {
             delete unused_words[i];
             console.log("successfully removed");
