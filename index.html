@@ -30,13 +30,17 @@
       function check() {
                          var input = document.getElementByID("uin");
                          console.log(input);
+                         $.ajax({
+                         method: "GET",
+                         url: "subracks.php",
+                         success: data=>{compare(data)}
+                        });
       }
                                                                    
       
       let showRacks = function(racks){
         $("#scramble").html('');
         $("#scramble").text(`${racks[0].rack}`);
-        
         
         }
 
