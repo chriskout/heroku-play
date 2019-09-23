@@ -16,10 +16,10 @@
     <ul id="bingos">
     </ul> 
     
-    <form id = "myform">
+    <form name = "myform">
       Word:<br>
       <input type="text" name = "uin" value = ""><br>
-      <input type="submit" id = "usubmit" onclick="check(this.form)">
+      <input type="button" Value = "Click to Check" onclick="check(this.form)">
     </form>
     <button id="Submit">New Scramble</button>
   </body>
@@ -28,6 +28,7 @@
       console.log("string");
       
       function check(form) {
+                        console.log("eff");
                         var input=0;
                          input=document.myform.uin.value;
                          var res;
