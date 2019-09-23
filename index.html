@@ -29,12 +29,13 @@
       
       function check() {
                          var input = document.getElementByID("uin");
-                         var res
+                         var res;
                          console.log(input);
+                         console.log(scramble.text);
                          $.ajax({
                          method: "GET",
                          url: "subracks.php",
-                         data: {subracks: 'sub', arguments: [input]},
+                         data: {subracks: 'sub', arguments: [scramble.text]},
                          success: function(obj, textstatus) {
                             if (!('error' in obj)  ) {
                                res = obj.result;
@@ -43,9 +44,14 @@
                               console.log(obj.error);
                             }
                          }
-                           
-                           
+                         
                         });
+                         if (input == res) {
+                           console.log("Made it here");
+                         }
+                          else {
+                                 console.log("made it here");
+                          }
       }
                                                                    
       
