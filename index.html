@@ -27,8 +27,9 @@
     var unused_words = {};
     var used_words = {};
     function check(form) {
-        console.log(input);
+        
         var input = document.myform.uin.value;
+        console.log(input);
         $.each(unused_words, function(i, val) {
           console.log(val);
           if (val == input) {
