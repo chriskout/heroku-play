@@ -10,18 +10,17 @@
   </head>
   <body>
     
-       
-    <h1 id = "scramble">Hit Grab More to get a rack</h1>
-    <button id="grabmore">grab more</button>
-    <ul id="bingos">
-    </ul> 
-    
+     
+    <h1 id = "scramble">Are you ready?</h1>
+    <button id="grabmore">Get a Rack</button>
     <form name = "myform">
       Word:<br>
       <input type="text" name = "uin" value = ""><br>
       <input type="button" Value = "Click to Check" onclick="check(this.form)">
     </form>
-    <button id="Submit">New Scramble</button>
+    <ul id="bingos">
+    </ul> 
+    
   </body>
   <script>
     var unused_words = {};
@@ -91,6 +90,8 @@
       
       $("#grabmore").on("click", function(){
         console.log("getting Stuff");
+        document.getElementById("bingos").innerHTML = "";
+        unused_words = {};
         $.ajax({
             method: "GET",
             url: "api.php",
