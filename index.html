@@ -24,7 +24,19 @@
     <button id="Submit">New Scramble</button>
   </body>
   <script>
+    var unused_words = {};
+    var used_words = {};
     function check(form) {
+        consol.log{"checking...};
+        var input = document.myform.uin.value;
+        JQuery.each(unused_words, function(i, val) {
+          if (val == input) {
+            delete unused_words[i];
+            console.log("successfully removed");
+          }
+        }
+                  }
+    function check_office_hourse(form) {
                         console.log("eff");
                         var input=0;
                          input=document.myform.uin.value;
@@ -63,7 +75,7 @@
        //var the_rack = JSON.parse(racks);
         var the_rack = racks['rack'];
         console.log(JSON.stringify(racks));
-       
+        unused_words = racks['words'];
         $("#scramble").text(the_rack);
         
         }
