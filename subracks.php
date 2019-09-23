@@ -42,6 +42,11 @@ for($i = 0; $i < pow(2, strlen($myrack)); $i++){
 	}
 
 }
+		break;
+
+            default:
+               $aResult['error'] = 'Not found function '.$_POST['functionname'].'!';
+               break;
 
 		}
 
