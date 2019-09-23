@@ -25,10 +25,11 @@
   </body>
   <script>
     var unused_words = {};
-    var used_words = {};
+   
     function check(form) {
         
         var input = document.myform.uin.value;
+        input = input.toUpperCase();
         console.log(input);
         $.each(unused_words, function(i, val) {
           console.log(val);
